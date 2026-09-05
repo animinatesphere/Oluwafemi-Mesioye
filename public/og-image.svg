@@ -1,0 +1,13 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#000000"/>
+  <circle cx="1050" cy="80" r="270" fill="#6D5DF6" fill-opacity="0.16"/>
+  <circle cx="1050" cy="80" r="170" fill="#E4B363" fill-opacity="0.08"/>
+  <path d="M0 510H1200" stroke="#2A2930"/>
+  <rect x="82" y="82" width="92" height="92" rx="26" fill="#6D5DF6"/>
+  <path d="M108 113.6C108 106.09 114.09 100 121.6 100H134.4C141.91 100 148 106.09 148 113.6V142.4C148 149.91 141.91 156 134.4 156H121.6C114.09 156 108 149.91 108 142.4V113.6Z" stroke="#F2F0EB" stroke-width="5"/>
+  <path d="M115 151.8L128 133L141 151.8M128 133L141 107.2" stroke="#E4B363" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="82" y="330" fill="#F2F0EB" font-family="Georgia, serif" font-size="86" font-weight="700">Oluwafemi</text>
+  <text x="82" y="420" fill="#A79BFF" font-family="Georgia, serif" font-size="86" font-weight="700">Mesioye</text>
+  <text x="86" y="486" fill="#8B8B93" font-family="Arial, sans-serif" font-size="24" letter-spacing="2">PRODUCT MANAGER  /  STRATEGY  /  DELIVERY</text>
+  <text x="1032" y="570" fill="#E4B363" font-family="Arial, sans-serif" font-size="18" text-anchor="end">BUILDING PRODUCTS THAT MATTER</text>
+</svg>
