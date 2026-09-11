@@ -7,7 +7,10 @@ export default function Contact() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      revealOnScroll(".contact-reveal", { trigger: root.current, stagger: 0.1 });
+      revealOnScroll(".contact-reveal", {
+        trigger: root.current,
+        stagger: 0.1,
+      });
 
       if (reduced()) return;
       gsap.to(".contact-glow", {
@@ -50,6 +53,12 @@ export default function Contact() {
           Have a product that needs direction?
         </h2>
 
+        <p className="contact-reveal mt-8 max-w-[56ch] text-[16px] leading-relaxed text-muted">
+          Whether you're exploring new markets, scaling a team, or solving
+          complex product challenges, I'm interested in conversations that shape
+          products and organizations.
+        </p>
+
         <a
           href={`mailto:${profile.email}`}
           className="contact-reveal link-underline mt-8 inline-block font-display text-[1.4rem] text-violet-soft sm:text-[2rem]"
@@ -57,9 +66,11 @@ export default function Contact() {
           {profile.email}
         </a>
 
-        <ul className={`contact-reveal mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 ${
+        <ul
+          className={`contact-reveal mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 ${
             lines.length > 3 ? "lg:grid-cols-4" : "lg:grid-cols-3"
-          }`}>
+          }`}
+        >
           {lines.map((l) => (
             <li key={l.k} className="bg-ink p-6">
               <p className="text-[13px] text-faint">{l.k}</p>
@@ -73,7 +84,9 @@ export default function Contact() {
                   {l.v}
                 </a>
               ) : (
-                <p className="mt-2 text-[15px] leading-snug text-paper">{l.v}</p>
+                <p className="mt-2 text-[15px] leading-snug text-paper">
+                  {l.v}
+                </p>
               )}
             </li>
           ))}

@@ -2,6 +2,12 @@ import { useLayoutEffect, useRef } from "react";
 import { gsap, revealOnScroll } from "../lib/motion.js";
 import { practice } from "../data/content.js";
 
+const practiceImages = [
+  "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=400&fit=crop",
+];
+
 export default function Practice() {
   const root = useRef(null);
 
@@ -41,6 +47,15 @@ export default function Practice() {
               key={group.stage}
               className="practice-reveal group relative bg-ink p-7 transition-colors duration-500 hover:bg-white/[0.025] sm:p-9"
             >
+              {/* Image background */}
+              <div className="absolute inset-0 overflow-hidden rounded-lg opacity-20 -z-10">
+                <img
+                  src={practiceImages[i]}
+                  alt={group.stage}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
               <span className="text-[13px] text-faint">
                 {String(i + 1).padStart(2, "0")}
               </span>

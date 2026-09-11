@@ -42,6 +42,11 @@ export default function Outcomes() {
             <h2 className="outcome-head mt-5 max-w-[20ch] font-display text-[2rem] font-medium leading-[1.1] tracking-tight sm:text-[3rem]">
               What changed when the work shipped
             </h2>
+            <p className="outcome-head mt-4 max-w-[48ch] text-[15px] leading-relaxed text-faint">
+              These metrics represent measurable business and customer impact
+              from my product initiatives. Every percentage point reflects
+              deliberate, data-driven decisions and cross-functional execution.
+            </p>
           </div>
           <p className="outcome-head max-w-[32ch] text-[15px] leading-relaxed text-muted">
             Recorded as {outcomes.source}.

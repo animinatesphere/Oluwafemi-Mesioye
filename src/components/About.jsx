@@ -6,7 +6,7 @@ const facts = [
   { k: "Experience", v: "3+ years in product" },
   { k: "Sectors", v: "Education, health, analytics, mobility, retail" },
   { k: "Ways of working", v: "Agile, Scrum, evidence-based management" },
-  { k: "Based in", v: "Ogun State, Nigeria — working remotely" },
+  { k: "Based in", v: "Lagos, Nigeria — working remotely" },
 ];
 
 export default function About() {
@@ -23,7 +23,11 @@ export default function About() {
           duration: 0.9,
           stagger: 0.08,
           ease: "power3.out",
-          scrollTrigger: { trigger: ".fact-list", start: "top 85%", once: true },
+          scrollTrigger: {
+            trigger: ".fact-list",
+            start: "top 85%",
+            once: true,
+          },
         });
       }
     }, root);
@@ -31,7 +35,11 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" ref={root} className="shell scroll-mt-24 py-24 sm:py-32">
+    <section
+      id="about"
+      ref={root}
+      className="shell scroll-mt-24 py-24 sm:py-32"
+    >
       <p className="marker about-reveal">About</p>
 
       <div className="mt-10 grid gap-14 lg:grid-cols-12 lg:gap-16">
@@ -54,6 +62,15 @@ export default function About() {
           <blockquote className="about-reveal mt-10 border-l border-violet-soft/60 pl-5 text-[17px] leading-relaxed text-paper">
             {closingLine}
           </blockquote>
+
+          {/* About visual */}
+          <div className="about-reveal mt-12 overflow-hidden rounded-2xl border border-line">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+              alt="Product management collaboration"
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
 
         <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">

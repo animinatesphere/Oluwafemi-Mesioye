@@ -34,7 +34,7 @@ export default function Hero({ ready }) {
         .from(
           ".hero-meta",
           { y: 18, autoAlpha: 0, duration: 0.7, stagger: 0.08 },
-          "-=0.65"
+          "-=0.65",
         )
         .from(
           ".hero-card",
@@ -45,7 +45,7 @@ export default function Hero({ ready }) {
             duration: 0.7,
             stagger: 0.09,
           },
-          "-=0.55"
+          "-=0.55",
         )
         .from(".hero-glow", { autoAlpha: 0, duration: 1.4 }, 0)
         .from(".hero-scroll", { autoAlpha: 0, duration: 0.6 }, "-=0.2");
@@ -119,32 +119,44 @@ export default function Hero({ ready }) {
           </div>
 
           {/* Prioritised stack of roles */}
-          <div className="lg:col-span-5">
-            <p className="hero-meta pre-anim marker mb-5">Where I've built</p>
-            <ul className="space-y-2">
-              {stack.map((s) => (
-                <li
-                  key={s.company}
-                  className="hero-card pre-anim flex items-start justify-between gap-4 rounded-xl border border-line bg-white/[0.02] px-4 py-3.5 backdrop-blur-sm"
-                >
-                  <div>
-                    <p className="text-[15px] font-medium text-paper">
-                      {s.company}
-                    </p>
-                    <p className="mt-0.5 text-[13px] leading-snug text-faint">
-                      {s.role}
-                    </p>
-                  </div>
-                  <span
-                    className={`shrink-0 whitespace-nowrap pt-1 text-[12px] ${
-                      s.current ? "text-violet-soft" : "text-faint"
-                    }`}
+          <div className="lg:col-span-5 flex flex-col gap-8">
+            <div>
+              <p className="hero-meta pre-anim marker mb-5">Where I've built</p>
+              <ul className="space-y-2">
+                {stack.map((s) => (
+                  <li
+                    key={s.company}
+                    className="hero-card pre-anim flex items-start justify-between gap-4 rounded-xl border border-line bg-white/[0.02] px-4 py-3.5 backdrop-blur-sm"
                   >
-                    {s.current ? "Now" : s.period.split("—")[1]?.trim()}
-                  </span>
-                </li>
-              ))}
-            </ul>
+                    <div>
+                      <p className="text-[15px] font-medium text-paper">
+                        {s.company}
+                      </p>
+                      <p className="mt-0.5 text-[13px] leading-snug text-faint">
+                        {s.role}
+                      </p>
+                    </div>
+                    <span
+                      className={`shrink-0 whitespace-nowrap pt-1 text-[12px] ${
+                        s.current ? "text-violet-soft" : "text-faint"
+                      }`}
+                    >
+                      {s.current ? "Now" : s.period.split("—")[1]?.trim()}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Personal image */}
+            <div className="hero-card pre-anim overflow-hidden rounded-2xl border border-line">
+              <img
+                src="/72QEouUP.jpg"
+                alt="Oluwafemi Mesioye"
+                className="w-full h-full object-cover"
+                style={{ height: "300px" }}
+              />
+            </div>
           </div>
         </div>
 

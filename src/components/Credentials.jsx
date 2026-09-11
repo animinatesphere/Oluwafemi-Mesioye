@@ -24,11 +24,18 @@ export default function Credentials() {
           <h2 className="cred-reveal mt-5 font-display text-[2rem] font-medium leading-[1.1] tracking-tight sm:text-[2.6rem]">
             Trained in the practice, not just the theory
           </h2>
+          <p className="cred-reveal mt-6 text-[15px] leading-relaxed text-faint">
+            Continuous learning and formal certifications in product management,
+            agile methodologies, and evidence-based leadership keep my practice
+            sharp and aligned with industry standards.
+          </p>
         </div>
 
         <div className="lg:col-span-8">
           <div className="cred-reveal">
-            <h3 className="text-[15px] text-faint">Certifications and training</h3>
+            <h3 className="text-[15px] text-faint">
+              Certifications and training
+            </h3>
             <ul className="mt-5">
               {certifications.map((c) => (
                 <li

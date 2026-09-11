@@ -116,9 +116,16 @@ export default function Work() {
               Products, teams and operations I've owned
             </h2>
           </div>
-          <p className="work-head max-w-[34ch] text-[15px] leading-relaxed text-muted">
-            Open a role to read what the work actually involved.
-          </p>
+          <div className="space-y-4">
+            <p className="work-head max-w-[34ch] text-[15px] leading-relaxed text-muted">
+              Open a role to read what the work actually involved.
+            </p>
+            <p className="work-head max-w-[34ch] text-[13px] leading-relaxed text-faint">
+              From founding roles at early-stage startups to managing complex
+              product operations at scale, I've led cross-functional teams
+              through discovery, delivery, and growth phases.
+            </p>
+          </div>
         </div>
 
         <div className="mt-14 border-b border-line">

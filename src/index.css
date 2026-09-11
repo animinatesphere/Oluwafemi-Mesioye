@@ -10,11 +10,33 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    cursor: none;
   }
 
   body {
     @apply bg-ink text-paper font-sans antialiased;
     overflow-x: hidden;
+    position: relative;
+    cursor: none;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+  }
+
+  section {
+    position: relative;
+    z-index: 1;
   }
 
   ::selection {
@@ -59,8 +81,24 @@
     @apply mx-auto w-full max-w-shell px-5 sm:px-8 lg:px-12;
   }
 
+  section {
+    @apply relative;
+  }
+
+  #contact {
+    @apply relative z-10;
+  }
+
   .rule {
     @apply h-px w-full bg-line;
+  }
+
+  nav {
+    @apply relative z-10;
+  }
+
+  footer {
+    @apply relative z-10;
   }
 
   /* Section marker: a hairline + sentence-case label, used instead of caps eyebrows */

@@ -8,8 +8,8 @@ export const profile = {
   first: "Oluwafemi",
   last: "Mesioye",
   role: "Product Manager",
-  location: "Abeokuta, Ogun State, Nigeria",
-  address: "9, Ogunbiyi Street, Abeokuta, Ogun State, Nigeria",
+  location: "Lagos, Nigeria",
+  address: "Lagos, Nigeria",
   email: "olufemimesioye@gmail.com",
   phone: "+2347055702762",
   // TODO: paste the full LinkedIn profile URL here (it was a hyperlink in the CV,
@@ -188,12 +188,42 @@ export const experience = [
 export const outcomes = {
   source: "Product Owner, Care Embassy (Digital) Healthcare Services",
   metrics: [
-    { value: 35, suffix: "%", label: "Higher customer satisfaction", note: "Continuous feedback and rapid UI/UX iteration" },
-    { value: 40, suffix: "%", label: "Growth in product market value", note: "Across two quarters, from sharper product-market fit" },
-    { value: 50, suffix: "%", label: "Faster time-to-market", note: "Design system components and front-end standards" },
-    { value: 30, suffix: "%", label: "Less rework", note: "100+ hours of customer and user interviews" },
-    { value: 25, suffix: "%", label: "Shorter sprint planning", note: "MoSCoW and Weighted Shortest Job First" },
-    { value: 20, suffix: "%", label: "Better customer retention", note: "Onboarding, in-app guidance and NPS-driven fixes" },
+    {
+      value: 35,
+      suffix: "%",
+      label: "Higher customer satisfaction",
+      note: "Continuous feedback and rapid UI/UX iteration",
+    },
+    {
+      value: 40,
+      suffix: "%",
+      label: "Growth in product market value",
+      note: "Across two quarters, from sharper product-market fit",
+    },
+    {
+      value: 50,
+      suffix: "%",
+      label: "Faster time-to-market",
+      note: "Design system components and front-end standards",
+    },
+    {
+      value: 30,
+      suffix: "%",
+      label: "Less rework",
+      note: "100+ hours of customer and user interviews",
+    },
+    {
+      value: 25,
+      suffix: "%",
+      label: "Shorter sprint planning",
+      note: "MoSCoW and Weighted Shortest Job First",
+    },
+    {
+      value: 20,
+      suffix: "%",
+      label: "Better customer retention",
+      note: "Onboarding, in-app guidance and NPS-driven fixes",
+    },
   ],
 };
 
@@ -218,14 +248,78 @@ export const certifications = [
   },
   {
     body: "Scrum.org",
-    title: "Professional Agile Leadership — Evidence Based Management (PAL-EBM)",
+    title:
+      "Professional Agile Leadership — Evidence Based Management (PAL-EBM)",
     status: "In view",
   },
 ];
 
+export const roadmap = {
+  title: "Professional Growth Roadmap",
+  subtitle: "Strategic milestones and focus areas for 2025–2026",
+  phases: [
+    {
+      phase: "Q1 2025",
+      title: "Foundation & Scaling",
+      status: "in-progress",
+      goals: [
+        "Establish core product strategy frameworks for ANTLERS initiatives",
+        "Scale training programme delivery across 3+ regions",
+        "Launch data-driven decision-making dashboard for ops teams",
+      ],
+      focus: ["Strategy", "Operations", "Data"],
+    },
+    {
+      phase: "Q2 2025",
+      title: "Market Expansion",
+      status: "planned",
+      goals: [
+        "Expand product offerings into adjacent markets",
+        "Build community engagement platform MVP",
+        "Implement advanced stakeholder feedback loops",
+      ],
+      focus: ["Growth", "Community", "Innovation"],
+    },
+    {
+      phase: "Q3 2025",
+      title: "Product Maturity",
+      status: "planned",
+      goals: [
+        "Optimize product-market fit through comprehensive user research",
+        "Launch go-to-market strategy for flagship products",
+        "Establish cross-functional product excellence standards",
+      ],
+      focus: ["Delivery", "Excellence", "GTM"],
+    },
+    {
+      phase: "Q4 2025",
+      title: "Strategic Leadership",
+      status: "planned",
+      goals: [
+        "Lead enterprise product initiatives with cross-org impact",
+        "Mentor emerging product managers in the ecosystem",
+        "Shape long-term product vision and roadmap priorities",
+      ],
+      focus: ["Leadership", "Mentorship", "Vision"],
+    },
+    {
+      phase: "2026",
+      title: "Vision & Impact",
+      status: "future",
+      goals: [
+        "Drive industry thought leadership through published insights",
+        "Build scalable product systems and frameworks",
+        "Expand product portfolio with innovative solutions",
+      ],
+      focus: ["Thought Leadership", "Systems", "Impact"],
+    },
+  ],
+};
+
 export const nav = [
   { id: "about", label: "About" },
   { id: "practice", label: "Practice" },
+  { id: "roadmap", label: "Roadmap" },
   { id: "work", label: "Work" },
   { id: "outcomes", label: "Outcomes" },
   { id: "credentials", label: "Credentials" },
