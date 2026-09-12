@@ -9,6 +9,7 @@ import Roadmap from "./components/Roadmap.jsx";
 import Work from "./components/Work.jsx";
 import Outcomes from "./components/Outcomes.jsx";
 import Credentials from "./components/Credentials.jsx";
+import Testimonials from "./components/Testimonials.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import ScrollProgress from "./components/ScrollProgress.jsx";
@@ -41,6 +42,7 @@ export default function App() {
         <Roadmap />
         <Work />
         <Outcomes />
+        <Testimonials />
         <Credentials />
         <Contact />
       </main>

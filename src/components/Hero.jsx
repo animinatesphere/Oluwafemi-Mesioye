@@ -1,5 +1,5 @@
-import { useLayoutEffect, useRef } from "react";
-import { gsap, ease, reduced } from "../lib/motion.js";
+import { useLayoutEffect, useRef, useState } from "react";
+import { gsap, ease, reduced, ScrollTrigger } from "../lib/motion.js";
 import { profile, experience } from "../data/content.js";
 
 /* The stack on the right reads like a prioritised backlog of the work itself. */
@@ -8,11 +8,97 @@ const stack = experience.slice(0, 4).map((e) => ({
   role: e.role,
   period: e.period,
   current: !!e.current,
+  sector: e.sector,
+  place: e.place,
+  bullets: e.bullets,
 }));
+
+function HeroCard({ item, isOpen, onToggle }) {
+  const body = useRef(null);
+  const inner = useRef(null);
+
+  useLayoutEffect(() => {
+    const el = body.current;
+    if (!el) return;
+    if (reduced()) {
+      el.style.maxHeight = isOpen ? "1000px" : "0px";
+      el.style.opacity = isOpen ? 1 : 0;
+      return;
+    }
+    const h = inner.current?.offsetHeight || 0;
+    const tween = gsap.to(el, {
+      maxHeight: isOpen ? h + 24 : 0,
+      opacity: isOpen ? 1 : 0,
+      duration: 0.4,
+      ease: "power3.inOut",
+      onComplete: () => {
+        if (isOpen) el.style.maxHeight = "none";
+        ScrollTrigger.refresh();
+      },
+    });
+    return () => tween.kill();
+  }, [isOpen]);
+
+  return (
+    <div className="hero-card pre-anim">
+      <button
+        onClick={onToggle}
+        className="w-full flex items-start justify-between gap-4 rounded-xl border border-line bg-white/[0.02] px-4 py-3.5 backdrop-blur-sm transition-all hover:border-violet-soft hover:bg-white/[0.04]"
+      >
+        <div className="text-left">
+          <p className="text-[15px] font-medium text-paper">{item.company}</p>
+          <p className="mt-0.5 text-[13px] leading-snug text-faint">
+            {item.role}
+          </p>
+        </div>
+        <span
+          className={`shrink-0 whitespace-nowrap pt-1 text-[12px] transition-transform duration-300 ${
+            item.current ? "text-violet-soft" : "text-faint"
+          } ${isOpen ? "rotate-180" : ""}`}
+        >
+          ↓
+        </span>
+      </button>
+
+      <div ref={body} className="overflow-hidden opacity-0 max-h-0">
+        <div ref={inner} className="px-4 py-4 pt-0">
+          <div className="space-y-4 border-t border-line/50 pt-4">
+            <div className="flex flex-wrap gap-2 text-[12px]">
+              <span className="rounded-full bg-violet/20 px-2.5 py-1 text-violet-soft">
+                {item.place}
+              </span>
+              <span className="rounded-full bg-amber/20 px-2.5 py-1 text-amber">
+                {item.sector}
+              </span>
+              <span className="rounded-full bg-line px-2.5 py-1 text-faint">
+                {item.period}
+              </span>
+            </div>
+            <ul className="space-y-3">
+              {item.bullets.slice(0, 4).map((bullet, i) => (
+                <li
+                  key={i}
+                  className="flex gap-3 text-[13px] leading-relaxed text-muted"
+                >
+                  <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-violet-soft/70" />
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+            <p className="text-[12px] text-faint italic">
+              +{item.bullets.length - 4} more accomplishments...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Hero({ ready }) {
   const root = useRef(null);
   const played = useRef(false);
+  const [openIndex, setOpenIndex] = useState(-1);
 
   useLayoutEffect(() => {
     if (!ready || played.current) return;
@@ -121,31 +207,16 @@ export default function Hero({ ready }) {
           {/* Prioritised stack of roles */}
           <div className="lg:col-span-5 flex flex-col gap-8">
             <div>
-              <p className="hero-meta pre-anim marker mb-5">Where I've built</p>
-              <ul className="space-y-2">
-                {stack.map((s) => (
-                  <li
+              <div className="space-y-2">
+                {stack.map((s, i) => (
+                  <HeroCard
                     key={s.company}
-                    className="hero-card pre-anim flex items-start justify-between gap-4 rounded-xl border border-line bg-white/[0.02] px-4 py-3.5 backdrop-blur-sm"
-                  >
-                    <div>
-                      <p className="text-[15px] font-medium text-paper">
-                        {s.company}
-                      </p>
-                      <p className="mt-0.5 text-[13px] leading-snug text-faint">
-                        {s.role}
-                      </p>
-                    </div>
-                    <span
-                      className={`shrink-0 whitespace-nowrap pt-1 text-[12px] ${
-                        s.current ? "text-violet-soft" : "text-faint"
-                      }`}
-                    >
-                      {s.current ? "Now" : s.period.split("—")[1]?.trim()}
-                    </span>
-                  </li>
+                    item={s}
+                    isOpen={openIndex === i}
+                    onToggle={() => setOpenIndex(openIndex === i ? -1 : i)}
+                  />
                 ))}
-              </ul>
+              </div>
             </div>
 
             {/* Personal image */}

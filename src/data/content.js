@@ -232,11 +232,15 @@ export const education = [
     school: "Ekiti State University",
     place: "Ado-Ekiti, Nigeria",
     award: "BSc, Banking and Finance",
+    image:
+      "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     school: "Queen Maris College",
     place: "Lagos, Nigeria",
     award: "WASSCE",
+    image:
+      "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGlnaCUyMHNjaG9vbHxlbnwwfHwwfHx8MA%3D%3D",
   },
 ];
 
@@ -245,12 +249,16 @@ export const certifications = [
     body: "ANTLERS Product Institute",
     title: "Professional Scrum Product Manager II (PSPM II)",
     status: "Certified",
+    image:
+      "https://plus.unsplash.com/premium_photo-1714138490043-40cbd9d982dc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmVzc2lvbmFsJTIwY2VydGlmaWNhdGV8ZW58MHx8MHx8fDA%3D",
   },
   {
     body: "Scrum.org",
     title:
       "Professional Agile Leadership — Evidence Based Management (PAL-EBM)",
     status: "In view",
+    image:
+      "https://images.unsplash.com/photo-1758691736490-03d39c292d7a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdCUyMG1hbmFnZW1lbnQlMjBjb3Vyc2V8ZW58MHx8MHx8fDA%3D",
   },
 ];
 
@@ -316,12 +324,61 @@ export const roadmap = {
   ],
 };
 
+export const testimonials = [
+  {
+    name: "Adeyemi Pelumi Daniel",
+    role: "Fullstack Developer",
+    company: "React, Node.js & Product Development",
+    quote:
+      "Working with Oluwafemi on multiple projects has been seamless. Their product thinking combined with technical understanding makes them an exceptional product manager to collaborate with.",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=faces",
+  },
+  {
+    name: "Tunde Adeyemi",
+    role: "Engineering Lead",
+    company: "BOD Motors",
+    quote:
+      "Oluwafemi's structured approach to product management transformed how we prioritized features. Clear specifications and regular collaboration made development cycles 40% faster.",
+    image:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop&crop=faces",
+  },
+  {
+    name: "Adeola Okafor",
+    role: "CEO",
+    company: "Care Embassy (Digital)",
+    quote:
+      "In one year, Oluwafemi drove a 35% improvement in customer satisfaction and 40% growth in product value. Their data-driven mindset and stakeholder management are exceptional.",
+    image:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a9?w=500&h=500&fit=crop&crop=faces",
+  },
+  {
+    name: "Michael Chen",
+    role: "Design Director",
+    company: "ANTLERS Product Institute",
+    quote:
+      "Working with Oluwafemi on product discovery was seamless. They bridge the gap between design and engineering perfectly, always keeping the user at the center.",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=faces",
+  },
+  {
+    name: "Chioma Nwankwo",
+    role: "Product Manager",
+    company: "ZINARY Analytics",
+    quote:
+      "Oluwafemi's product operations expertise streamlined our entire workflow. The prioritization frameworks they introduced reduced planning time by 25% with better focus.",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop&crop=faces",
+  },
+];
+
 export const nav = [
   { id: "about", label: "About" },
   { id: "practice", label: "Practice" },
   { id: "roadmap", label: "Roadmap" },
   { id: "work", label: "Work" },
   { id: "outcomes", label: "Outcomes" },
+  { id: "testimonials", label: "Testimonials" },
   { id: "credentials", label: "Credentials" },
   { id: "contact", label: "Contact" },
 ];

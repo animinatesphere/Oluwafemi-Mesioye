@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { gsap, revealOnScroll } from "../lib/motion.js";
 import { education, certifications } from "../data/content.js";
 
@@ -40,23 +40,33 @@ export default function Credentials() {
               {certifications.map((c) => (
                 <li
                   key={c.title}
-                  className="cred-reveal flex flex-col gap-2 border-t border-line py-6 sm:flex-row sm:items-start sm:justify-between sm:gap-10"
+                  className="cred-reveal flex flex-col gap-4 border-t border-line py-6 sm:flex-row sm:items-start sm:gap-6"
                 >
-                  <div>
+                  {/* Image */}
+                  <div className="h-24 w-24 shrink-0 overflow-hidden rounded-lg border border-line bg-gradient-to-br from-violet/20 to-amber/20">
+                    <img
+                      src={c.image}
+                      alt={c.title}
+                      className="h-full w-full object-cover opacity-75 hover:opacity-90 transition-opacity duration-300"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1">
                     <p className="text-[17px] leading-snug text-paper">
                       {c.title}
                     </p>
                     <p className="mt-1 text-[14px] text-muted">{c.body}</p>
+                    <span
+                      className={`mt-3 inline-block rounded-full border px-3 py-1 text-[12px] ${
+                        c.status === "Certified"
+                          ? "border-violet-soft/40 text-violet-soft"
+                          : "border-line text-faint"
+                      }`}
+                    >
+                      {c.status}
+                    </span>
                   </div>
-                  <span
-                    className={`shrink-0 self-start rounded-full border px-3 py-1 text-[12px] ${
-                      c.status === "Certified"
-                        ? "border-violet-soft/40 text-violet-soft"
-                        : "border-line text-faint"
-                    }`}
-                  >
-                    {c.status}
-                  </span>
                 </li>
               ))}
             </ul>
@@ -68,15 +78,25 @@ export default function Credentials() {
               {education.map((e) => (
                 <li
                   key={e.school}
-                  className="cred-reveal flex flex-col gap-2 border-t border-line py-6 sm:flex-row sm:items-baseline sm:justify-between sm:gap-10"
+                  className="cred-reveal flex flex-col gap-4 border-t border-line py-6 sm:flex-row sm:items-start sm:gap-6"
                 >
-                  <div>
+                  {/* Image */}
+                  <div className="h-24 w-24 shrink-0 overflow-hidden rounded-lg border border-line bg-gradient-to-br from-blue-500/20 to-purple-500/20">
+                    <img
+                      src={e.image}
+                      alt={e.school}
+                      className="h-full w-full object-cover opacity-75 hover:opacity-90 transition-opacity duration-300"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1">
                     <p className="text-[17px] text-paper">{e.school}</p>
                     <p className="mt-1 text-[14px] text-muted">{e.award}</p>
+                    <span className="mt-3 inline-block text-[13px] text-faint">
+                      {e.place}
+                    </span>
                   </div>
-                  <span className="shrink-0 text-[13px] text-faint">
-                    {e.place}
-                  </span>
                 </li>
               ))}
             </ul>
