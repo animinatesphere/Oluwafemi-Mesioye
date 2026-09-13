@@ -335,17 +335,17 @@ export const testimonials = [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=faces",
   },
   {
-    name: "Tunde Adeyemi",
+    name: "Babalola Oladeji",
     role: "Engineering Lead",
-    company: "BOD Motors",
+    company: "BOD Autos",
     quote:
       "Oluwafemi's structured approach to product management transformed how we prioritized features. Clear specifications and regular collaboration made development cycles 40% faster.",
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop&crop=faces",
   },
   {
-    name: "Adeola Okafor",
-    role: "CEO",
+    name: "Tolulope Adigun",
+    role: "UI/UX Designer",
     company: "Care Embassy (Digital)",
     quote:
       "In one year, Oluwafemi drove a 35% improvement in customer satisfaction and 40% growth in product value. Their data-driven mindset and stakeholder management are exceptional.",
@@ -353,22 +353,13 @@ export const testimonials = [
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a9?w=500&h=500&fit=crop&crop=faces",
   },
   {
-    name: "Michael Chen",
+    name: "Ruth Agbomom",
     role: "Design Director",
-    company: "ANTLERS Product Institute",
+    company: "Stovox by Antlers",
     quote:
       "Working with Oluwafemi on product discovery was seamless. They bridge the gap between design and engineering perfectly, always keeping the user at the center.",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=faces",
-  },
-  {
-    name: "Chioma Nwankwo",
-    role: "Product Manager",
-    company: "ZINARY Analytics",
-    quote:
-      "Oluwafemi's product operations expertise streamlined our entire workflow. The prioritization frameworks they introduced reduced planning time by 25% with better focus.",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop&crop=faces",
   },
 ];
 

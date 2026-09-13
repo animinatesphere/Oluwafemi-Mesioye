@@ -225,7 +225,7 @@ export default function Hero({ ready }) {
                 src="/72QEouUP.jpg"
                 alt="Oluwafemi Mesioye"
                 className="w-full h-full object-cover"
-                style={{ height: "300px" }}
+                style={{ height: "700px" }}
               />
             </div>
           </div>

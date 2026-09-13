@@ -50,7 +50,7 @@ function TestimonialCard({ item, index }) {
       className="testimonial-card group flex flex-col overflow-hidden rounded-2xl border border-line bg-white/[0.02] backdrop-blur-sm transition-all hover:border-violet-soft hover:bg-white/[0.05]"
     >
       {/* Image with parallax */}
-      <div
+      {/* <div
         className={`relative h-48 overflow-hidden bg-gradient-to-br ${gradients[index % 4]}`}
       >
         <img
@@ -67,7 +67,7 @@ function TestimonialCard({ item, index }) {
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="flex flex-1 flex-col p-6">
