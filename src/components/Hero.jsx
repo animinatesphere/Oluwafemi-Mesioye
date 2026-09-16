@@ -6,6 +6,8 @@ import { profile, experience } from "../data/content.js";
 const stack = experience.slice(0, 4).map((e) => ({
   company: e.company,
   role: e.role,
+  product: e.product,
+  image: e.image,
   period: e.period,
   current: !!e.current,
   sector: e.sector,
@@ -40,15 +42,15 @@ function HeroCard({ item, isOpen, onToggle }) {
   }, [isOpen]);
 
   return (
-    <div className="hero-card pre-anim">
+    <div className="hero-card pre-anim group relative">
       <button
         onClick={onToggle}
-        className="w-full flex items-start justify-between gap-4 rounded-xl border border-line bg-white/[0.02] px-4 py-3.5 backdrop-blur-sm transition-all hover:border-violet-soft hover:bg-white/[0.04]"
+        className="w-full flex items-start justify-between gap-4 rounded-xl border border-line bg-white/[0.02] px-4 py-3.5 text-left backdrop-blur-sm transition-all hover:border-violet-soft hover:bg-white/[0.04]"
       >
         <div className="text-left">
           <p className="text-[15px] font-medium text-paper">{item.company}</p>
           <p className="mt-0.5 text-[13px] leading-snug text-faint">
-            {item.role}
+            {item.product ? `${item.product} · ${item.role}` : item.role}
           </p>
         </div>
         <span
@@ -59,6 +61,16 @@ function HeroCard({ item, isOpen, onToggle }) {
           ↓
         </span>
       </button>
+
+      {item.image && (
+        <div className="grid max-h-0 overflow-hidden opacity-0 transition-[max-height,opacity] duration-500 group-hover:max-h-96 group-hover:opacity-100 group-focus-within:max-h-96 group-focus-within:opacity-100">
+          <img
+            src={item.image}
+            alt={`${item.product || item.company} product preview`}
+            className="mt-2 aspect-square w-full rounded-xl border border-line bg-black/20 object-contain object-center p-2"
+          />
+        </div>
+      )}
 
       <div ref={body} className="overflow-hidden opacity-0 max-h-0">
         <div ref={inner} className="px-4 py-4 pt-0">

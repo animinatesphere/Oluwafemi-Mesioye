@@ -79,6 +79,8 @@ export const experience = [
   {
     company: "ANTLERS Product Institute",
     role: "Product and Operations Manager",
+    product: "Stovox",
+    image: "/IMG-20260916-WA0025.jpg",
     place: "Lagos, Nigeria",
     period: "Oct 2024 — Present",
     current: true,
@@ -133,6 +135,7 @@ export const experience = [
   {
     company: "BOD Motors",
     role: "Product Manager, Digital Sales Tool",
+    image: "/IMG-20260916-WA0059.jpg",
     place: "Lagos, Nigeria — Hybrid",
     period: "Jul 2022 — Jan 2023",
     sector: "Mobility & marketplace",
