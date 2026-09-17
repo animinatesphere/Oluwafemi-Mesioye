@@ -67,7 +67,7 @@ function HeroCard({ item, isOpen, onToggle }) {
           <img
             src={item.image}
             alt={`${item.product || item.company} product preview`}
-            className="mt-2 aspect-square w-full rounded-xl border border-line bg-black/20 object-contain object-center p-2"
+            className="mt-2 aspect-square w-full translate-y-5 rounded-xl border border-line bg-black/20 object-contain object-center p-2 transition-transform duration-700 ease-out group-hover:translate-y-0 group-focus-within:translate-y-0"
           />
         </div>
       )}

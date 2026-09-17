@@ -101,6 +101,8 @@ export const experience = [
   {
     company: "ZINARY Analytics",
     role: "Growth Product Manager",
+    product: "ZinID",
+    image: "/IMG-20260917-WA0009.jpg",
     place: "Abuja, Nigeria — Remote, part time",
     period: "Jul 2025 — Nov 2025",
     sector: "Analytics",
@@ -117,6 +119,8 @@ export const experience = [
   {
     company: "Care Embassy (Digital) Healthcare Services",
     role: "Product Owner",
+    product: "Care Embassy",
+    image: "/IMG-20260917-WA0010.jpg",
     place: "England, UK — Remote",
     period: "Mar 2023 — Jan 2024",
     sector: "Digital health",
@@ -333,7 +337,7 @@ export const testimonials = [
     role: "Fullstack Developer",
     company: "React, Node.js & Product Development",
     quote:
-      "Working with Oluwafemi on multiple projects has been seamless. Their product thinking combined with technical understanding makes them an exceptional product manager to collaborate with.",
+      "Working with Oluwafemi on multiple projects has been seamless. His product thinking combined with technical understanding makes him an exceptional product manager to collaborate with.",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=faces",
   },
@@ -342,7 +346,7 @@ export const testimonials = [
     role: "Engineering Lead",
     company: "BOD Autos",
     quote:
-      "Oluwafemi's structured approach to product management transformed how we prioritized features. Clear specifications and regular collaboration made development cycles 40% faster.",
+      "His structured approach to product management transformed how we prioritized features. His clear specifications and regular collaboration made development cycles 40% faster.",
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop&crop=faces",
   },
@@ -351,7 +355,7 @@ export const testimonials = [
     role: "UI/UX Designer",
     company: "Care Embassy (Digital)",
     quote:
-      "In one year, Oluwafemi drove a 35% improvement in customer satisfaction and 40% growth in product value. Their data-driven mindset and stakeholder management are exceptional.",
+      "In one year, Oluwafemi drove a 35% improvement in customer satisfaction and 40% growth in product value. His data-driven mindset and stakeholder management are exceptional.",
     image:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a9?w=500&h=500&fit=crop&crop=faces",
   },
@@ -360,7 +364,7 @@ export const testimonials = [
     role: "Design Director",
     company: "Stovox by Antlers",
     quote:
-      "Working with Oluwafemi on product discovery was seamless. They bridge the gap between design and engineering perfectly, always keeping the user at the center.",
+      "Working with Oluwafemi on product discovery was seamless. He bridges the gap between design and engineering perfectly, always keeping the user at the center.",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=faces",
   },
